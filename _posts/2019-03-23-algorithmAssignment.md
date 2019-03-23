@@ -10,6 +10,8 @@ tags:
     - algorithm
 ---
 
+## 题目
+
 1. Given two strings $$ x = x_{1}x_{2} . . . xn $$ and$$ y = y_{1}y_{2} . . . y_{m}$$, we wish to find the length of their longest common substring, that is, the largest k for which there are indices i and j with $$x_{i}x_{i+1} . . . x_{i+k−1} = y_{j}y_{j+1} . . . y_{j+k−1}. $$Show how to do this in time O(mn).<br>
 使用动态规划算法，定义dp[i][j]为x中的以第i个字符为子串的结尾以及y中以第j个字符为子串结尾的最大公共子串。若x[i]与y[j]相同，那么dp[i][j] = dp[i-1][j-1] + 1,若不相同那么dp[i][j] = 0，则根据该算法求出最大公共子串只需要填充大小为mn的二位表格即可。即算法的时间复杂度为$$ O(mn) $$
 
